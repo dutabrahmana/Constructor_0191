@@ -3,20 +3,22 @@
 using namespace std;
 
 class Mahasiswa {
-public:
+private:
 	static int nim;
+
+public:
 	int id;
 	string nama;
 
 	void setID();
 	void printAll();
 
-	Mahasiswa(string pnama) :nama(pnama)
-	{
-		setID();
-	}
-};
+	static void setNim(int pNim) { nim = pNim; /*Definisi function*/ }
+	static int getNim() { return nim; /*Definisi Function*/ }
 
+
+	Mahasiswa(string pnama) :nama(pnama) { setID(); }
+};
 int Mahasiswa::nim = 191;
 
 void Mahasiswa::setID() {
@@ -30,10 +32,10 @@ void Mahasiswa::printAll()
 	cout << endl;
 }
 
-int main()
-{
-	Mahasiswa mhs1("Lia Kurnia");
-	Mahasiswa mhs2("Asroni");
+int main() {
+	Mahasiswa mhs1("Sri Dadi");
+	Mahasiswa mhs2("Budi Jatmiko");
+	Mahasiswa::setNim(9);
 	Mahasiswa mhs3("Andi Kurniawan");
 	Mahasiswa mhs4("Joko Purbo");
 
@@ -42,9 +44,25 @@ int main()
 	mhs3.printAll();
 	mhs4.printAll();
 
+	cout << "akses dari luar objek = " << Mahasiswa::getNim() << endl;
+
 	system("pause");
+
 	return 0;
-
-
 }
 
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+    
+}
