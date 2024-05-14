@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class mahasiswa {
+class Mahasiswa {
 public:
 	static int nim;
 	int id;
@@ -11,9 +11,11 @@ public:
 	void setID();
 	void printAll();
 
-	mahasiswa(string pnama) :nama(pnama)
+	Mahasiswa(string pnama) :nama(pnama)
 	{
 
 	}
 };
+
+int Mahasiswa::nim = 100;
 
