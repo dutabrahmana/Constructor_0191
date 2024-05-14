@@ -17,5 +17,34 @@ public:
 	}
 };
 
-int Mahasiswa::nim = 100;
+int Mahasiswa::nim = 191;
+
+void Mahasiswa::setID() {
+	id = ++nim;
+}
+
+void Mahasiswa::printAll()
+{
+	cout << "ID = " << id << endl;
+	cout << "Nama = " << nama << endl;
+	cout << endl;
+}
+
+int main()
+{
+	Mahasiswa mhs1("Lia Kurnia");
+	Mahasiswa mhs2("Asroni");
+	Mahasiswa mhs3("Andi Kurniawan");
+	Mahasiswa mhs4("Joko Purbo");
+
+	mhs1.printAll();
+	mhs2.printAll();
+	mhs3.printAll();
+	mhs4.printAll();
+
+	system("pause");
+	return 0;
+
+
+}
 
